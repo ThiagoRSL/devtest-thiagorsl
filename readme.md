@@ -56,3 +56,10 @@ Below is a list of some things from previous submissions that haven't worked out
 - Built a full website with bells and whistles
 - Spent more than the time allowed (you won't get bonus points for creating an intricate solution, we want a fit for purpose solution)
 - Overcomplicated the system mentally and failed to start
+
+#### Execution
+- Run db_init.py to create the db.
+- Run db.py to create the tables.
+- Run app.py to execute the tests.
+- Spent more than the time allowed (you won't get bonus points for creating an intricate solution, we want a fit for purpose solution)
+- Overcomplicated the system mentally and failed to start

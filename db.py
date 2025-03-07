@@ -34,7 +34,7 @@ class ElevatorDemand(baseDec):
 
 def NewState(e_id, cf, tf, date, moving, vacant):
 
-    return ElevatorState(
+    state = ElevatorState(
         elevator_id = e_id,
         current_floor = cf,
         target_floor = tf,
@@ -43,14 +43,19 @@ def NewState(e_id, cf, tf, date, moving, vacant):
         vacant = vacant
     )
 
-def NewDemand(e_id, state_id, demanded_at, floor):
+    return state
 
-    return ElevatorDemand(
+def NewDemand(e_id, s_id, demanded_at, floor):
+
+    demand = ElevatorDemand(
         elevator_id = e_id,
         date = demanded_at,
-        starting_state_id = state_id,
-        goal_floor = floor
+        state_id = s_id,
+        demanded_floor = floor
     )
+
+    return demand
+
 
 if __name__ == "__main__":
     baseDec.metadata.create_all(engine)
